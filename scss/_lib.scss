@@ -1,0 +1,131 @@
+
+
+
+/////////////////////
+/////---共通---////
+/////////////////////
+
+body {
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    h1, h2, h3, h4, h5, h6 p {
+        opacity: 0.8;
+        font-weight: lighter;
+        
+    }
+
+}
+
+
+/////////////////////
+/////---mix-in---////
+/////////////////////
+
+@media (min-width: 769px) {
+    .movie_res {
+        display: none;
+    }
+    .movie_res_bottom {
+        display: none;
+    }
+    .res_intro__wrap {
+        display: none;
+    }
+    .res__impressions {
+        display: none;
+    }
+    .res__intro__wrap {
+        display: none;
+    }
+    .footer__sm {
+        display: none;
+    }
+}
+
+
+//xs < 576px
+@media (max-width: 576px) {
+
+}
+
+//sm < 768px
+@media (max-width: 768px) {
+    .movie__wrap {
+        display: none;
+    }
+    .movie__btn {
+        display: none;
+    }
+    .intro__wrap {
+        display: none;
+    }
+    .impression {
+        display: none;
+    }
+
+    .experience h1 {
+            font-size: 1.5rem;
+    }
+
+    .experience__wrap {
+        width: 100%;
+        height: 380px;
+        // padding: 0;
+    }
+    .support {
+        margin-top: 1rem!important;
+        padding: 4rem 3rem!important;
+        &__title {
+            font-size: 1.5rem;
+        }
+    }
+    .format__title {
+        font-size: 1.5rem;
+    }
+    .footer__md {
+        display: none;
+    }
+    .movie__btn{ 
+        display: none;
+    }
+}  
+
+
+//md < 992px
+@media (max-width: 992px) {
+    .impression__txt {
+        line-height: 2rem!important;
+        font-size: 1.1rem;
+    }
+
+}
+
+//lg < 1126px
+@media (max-width: 1199px) {
+    .navbar-nav {
+        display: none!important;
+    }
+    .movie {
+        height: 75vh;
+        &__btn {
+            bottom: 28%;
+        }
+    }
+    .footer__around {
+        display: none;
+    }
+    
+}
+
+//xl > 1127px
+@media (min-width: 1200px)  {
+    .underlg_border {
+        display: none;
+    }
+    .footer__md {
+        display: none!important;
+    }
+    .res_footer__access {
+        display: none;
+    }
+}
+

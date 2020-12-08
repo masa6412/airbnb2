@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>bootstrap2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+            <div class="container-fluid">
+              <div class="row">
+                  <video class="embed-responsive-item movie" id="video" src="./movie/pexels-taryn-elliott-5614884.mp4" autoplay="true" allowfullscreen></video>
+                <button type="button" class="btn movie__btn" id="pause">
+                  <p class="movie__btn__text">停止</p>
+                  <svg width="2em" height="2em" viewBox="0 0 16 16" class="movie__btn__logo bi bi-pause-fill" fill="currentColor" 
+                  xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                  </svg>
+                </button>
+    
+                <button type="button" class="btn movie__btn" style="display: none;" id="playback" data-target="pause">
+                    <p class="movie__btn__text">再生</p>
+                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="movie__btn__logo bi bi-play-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                    </svg>
+                </button>
+
+                <!-- movie__wrap < sm  上部-->
+                <div class="container movie_res">
+                  <div class="row">
+                    <div class="col-10">
+                      <h2 style="font-weight: bold; color: #fff; opacity: 1;">世界の果てまで、アットホーム</h2>
+                    </div>
+                    <div class="d-flex mt-3">
+                      <a href="#"><p class="text-white col-12" style="font-weight: bold;">Airbnbビジネスプログラムの動画を見る</p></a>
+                      <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-play-fill pl-1" style="color: #fff;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="container">
+                  <div class="row">
+                      <div class="movie__wrap">
+                        <div class="row">
+                          <div class="movie__wrap__response">
+                            <h1>世界の果てまで、アットホーム</h1>
+                            <div class="d-flex mt-3">
+                              <a href="#"><p class="text-white">Airbnbビジネスプログラムの動画を見る</p></a>
+                              <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-play-fill pl-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <form class="row">
+                          <!-- 縦並びにしたかったのでlabelタグを外に出した -->
+                          <label for="email" class="mt-3">まずは仕事用メールアドレスの登録から</label>
+                          <div class="input-group input-group-lg input__wrap">
+                            <input type="email" class="form-control hd-input" style="height: 60px; width: 450px;" placeholder="メールアドレス" aria-label="Recipient's username" aria-describedby="basic-addon2" id="email">
+                            <button class="btn btn-info text-nowrap hd-input__button" id="email" type="button">メールアドレスを追加</button><br>
+                          </div>
+                        </form>
+                            <div class="d-flex row mt-2">
+                              <p>出張管理をご担当ですか？</p>
+                              <a href="#" class="pl-3 " style="font-weight: bold; color: #fff;">もっと詳しく</a>
+                              <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-chevron-right pl-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                            </div>
+                      </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          
+            <!-- <div class="fixed-top"> -->
+              <nav class="navbar navbar-expand-xl pt-4 navbar-light movie__hd fixed-top">
+                <a class="navbar-brand" href="https://www.airbnb.jp/?logo=1">
+                  <svg width="1.75em" height="1.75em" viewBox="0 0 16 16" class="bi bi-exclude" style="color: rgb(180, 47, 43); pointer-events: none;" id="header-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm12 2v7a1 1 0 0 1-1 1H4V5a1 1 0 0 1 1-1h7z"/>
+                  </svg>
+                </a>
+                <button id="sumple" class="navbar-toggler toggle_nav" style="border: none; position: absolute; left: 40px;" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <!-- sm xsサイズでメニューが下のロゴに格納される。 -->
+                  <!-- navアイコン横の、押したら回転するアイコン -->
+                  <label for="toggle">
+                    <input type="checkbox" id="toggle">
+                    <a href="#">
+                      <svg id="rotate_icon" width=".625em" height=".625em" style="color: #fff;"  viewBox="0 0 16 16" class="bi bi-chevron-down ml-2 mt-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </a>
+                      <!-- <ul id="accordion_menu">
+                        <li>
+                          <a href="https://www.airbnb.jp/"></a>
+                        </li>
+                        
+                      </ul> -->
+                  </label>
+                </button>
+
+                  <!-- sm xsサイズのレスポンス -->
+                  <div class="hd-nav collapse navbar navbar-collapse" id="navbarTogglerDemo01">
+                    <!-- 以下のaタグをレスポンシブに応じてリンク先へ移動したりドロップダウンメニューとして機能させたりしたい -->
+                    <!-- <a class="navbar-brand d-none" href="#">
+                      <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-app-indicator" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"/>
+                        <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                      </svg>
+                    </a> -->
+                    <ul class="navbar-nav ml-auto mr-0 mt-2 mt-lg-0">
+                      <li class="nav-item current-item nav_first">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe nav_first_icon " style="color: white; margin-top: 11px;" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
+                        </svg>
+                        <a class="nav-link ml-3" href="#" style="color:#fff;text-decoration:none">日本語(JP)<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item px-2">
+                        <a class="nav-link" href="#" style="color:#fff;text-decoration:none">¥JPY</a>
+                        <span class="border-bottom"></span>
+                      </li>
+                      <li class="nav-item px-2">
+                        <a class="nav-link" href="#" style="color:#fff;text-decoration:none">ホストをはじめる</a>
+                      </li>
+                      <li class="nav-item px-2">
+                        <a class="nav-link" href="#" style="color:#fff;text-decoration:none">ヘルプ</a>
+                      </li>
+                      <li class="nav-item px-2">
+                        <a class="nav-link" href="#" style="color:#fff;text-decoration:none">登録する</a>
+                      </li>
+                      <li class="nav-item px-2">
+                        <a class="nav-link" href="#" style="color:#fff;text-decoration:none">ログイン</a>
+                      </li>
+                    </ul>
+                    <span id="slide-line"></span>
+                  
+                  </div>
+                </nav>
+
+                <!-- アイコンを押すとシャッターのように上から落ちてくる動作 -->
+                <div class="shutter"></div>
+                  <section class="container">
+                   
+                  </section>
+                
+              
+
+              <!-- movie__wrap < sm 下部 > -->
+
+              <div class="container-fluid movie_res_bottom">
+                <form class="row ml-3">
+                   <!-- 縦並びにしたかったのでlabelタグを外に出した -->
+                   <div class="col-12">
+                     <label for="email" class="mt-3" style="font-weight: bold; opacity: 0.7;">まずは仕事用メールアドレスの登録から</label>
+                     <div class="input-group input-group-lg input__wrap">
+                       <input type="email" class="form-control hd-input" style="height: 60px; width: 450px;" aria-label="Recipient's username" aria-describedby="basic-addon2" id="email">
+                       <button class="btn btn-info text-nowrap hd-input__button" id="email" type="button">メールアドレスを追加</button><br>
+                     </div>
+                   </div>
+                </form>
+                <div class="d-block row mt-4 mx-2 mb-5">
+                  <p class="mb-0">出張管理をご担当ですか？</p>
+                  <a href="#">もっと詳しく</a>
+                  <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-chevron-right pl-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="container-fluid" style="width: 95%;">
+                <div class="row">
+                    <div class="res_border"></div>
+                </div>
+              </div>
+
+            <div class="container experience">
+              <div class="row">
+                  <h1 class="m-auto experience__title text-center">最高の仕事に必要なものすべてを完備</h1>
+              </div>
+
+                  <div class="row d-flex mt-4">
+                    <div class="experience__wrap col-md-4 col-sm-12">
+                      <img class="img-fluid w-100 h-75" src="https://picsum.photos/id/10/200/300" alt="#">
+                      <p class="experience__wrap__text text-center mt-3" style="font-size: 1.1rem;">高評価の宿泊先＆デザイナーズホテル</p>
+                      
+                    </div>
+
+                    <div class="experience__wrap col-md-4 col-sm-12">
+                      <img class="img-fluid w-100 h-75" src="https://picsum.photos/id/11/200/300" alt="#">
+                      <p class="experience__wrap__text text-center mt-3" style="font-size: 1.1rem;">チームビルディング体験</p>
+                    </div>
+
+                    <div class="experience__wrap col-md-4 col-sm-12">
+                      <img class="img-fluid w-100 h-75" src="https://picsum.photos/id/12/200/300" alt="#">
+                      <p class="experience__wrap__text text-center mt-3" style="font-size: 1.1rem;">コラボを育むスペース</p>
+                    </div>
+                
+                  </div>
+              </div>
+
+            <div class="intro__wrap">
+              <div class="container-fluid">
+                <div class="row mx-2">
+                  <div class="introduce d-flex">
+                    <div class="col-md-5 pl-0">
+                      <img class="introduce__pic w-100" src="https://picsum.photos/id/445/500/600" alt="#">
+                    </div>
+                    <div class="introduce__wrap col-md-7">
+                      <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                          <h2>出張先でもアットホーム</h2>
+                          <p>出張のときも、新天地の異動のときも安心。他の出張者が５つ星評価をつけたお部屋やデザイナーズハウスを探しましょう。</p>
+                          <a href="https://www.airbnb.jp/s/homes?refinement_paths[]=homes&work_trip=true">仕事用スペースを完備した宿泊先を検索</a>    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-fluid mt-3">
+                <div class="row mx-2">
+                  <div class="introduce d-flex">
+                    <div class="introduce__wrap col-md-7" style="background: rgb(0, 108, 112);">
+                      <div class="row">
+                        <div class="col-md-10 offset-md-1" style="color: #fff;">
+                          <h2>チームの心をひとつに</h2>
+                          <p>ラーメン作り教室やカヌーレッスンに参加。普段オフィスでは目にできない同僚たちの意外な面に触れ、深いレベルでつながれます。</p>
+                          <a style="color: #fff;" href="https://www.airbnb.jp/s/homes?refinement_paths[]=homes&work_trip=true">Airbnbの「体験」を検索</a>    
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-5 pr-0">
+                      <img class="introduce__pic w-100" src="https://picsum.photos/id/448/500/600" alt="#">
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-fluid mt-3">
+                <div class="row mx-2">
+                  <div class="introduce d-flex">
+                    <div class="col-md-5 pl-0">
+                      <img class="introduce__pic w-100" src="https://picsum.photos/id/456/500/600" alt="#">
+                    </div>
+                    <div class="introduce__wrap col-md-7">
+                      <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                          <h2>創造力をかきたてるスペース</h2>
+                          <p>煮詰まったら1日オフサイトで気分を変えてみませんか？ひらめきが湧く環境で、チームの生産性を高めましょう。</p>
+                          <a href="https://www.airbnb.jp/s/homes?refinement_paths[]=homes&work_trip=true">Wi-Fi完備の宿泊先を見る</a>    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- res_intro__wrap < sm -->
+            <div class="res__intro__wrap">
+              <div class="container-fluid res_intro__border">
+                <div class="row mx-3" style="border: 1px solid rgb(241, 239, 239);"></div>
+              </div>
+              
+              <div class="container-fluid res_intro__wrap mt-5">
+                <div class="row mx-5">
+                  <h4>出張先でもアットホーム</h4>
+                  <p class="mt-3" style="font-size: 14px;">出張のときも新天地に異動のときも安心。他の出張者が５つ星評価をつけたお部屋やデザイナーズホテルを探しましょう。</p>
+                  <div class="d-flex">
+                    <a href="https://www.airbnb.jp/s/homes?refinement_paths[]=homes&work_trip=true">仕事用スペースを完備した宿泊先を検索</a>
+                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-chevron-right pl-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              
+              <img class="res__intro__img mt-5 mb-3" src="https://picsum.photos/id/445/740/380" alt="#">
+              <div class="container-fluid">
+                <div class="row" style="background-color: rgb(0, 108, 112);">
+                  <div class="col-12 p-5" style="color: #fff;">
+                    <h4 style="opacity: 1; font-weight: lighter;">チームの心をひとつに</h4>
+                    <p style="font-size: 14px;">ラーメン作りやカヌーレッスンに参加。普段オフィスでは目にできない同僚たちの意外な面に触れ、深いレベルでつながれます。</p>
+                    <div class="d-flex">
+                      <a style="color: #fff;" href="https://www.airbnb.jp/s/homes?refinement_paths[]=homes&work_trip=true">Airbnbの「体験」を検索</a>
+                      <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-chevron-right pl-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <img class="res__intro__img mt-3 mb-3" src="https://picsum.photos/id/448/740/380" alt="#">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12 p-5" style="color: black; opacity: 0.7;">
+                    <h4 style="opacity: 1; font-weight: lighter;">創造力をかきたてるスペース</h4>
+                    <p style="font-size: 14px;">煮詰まったら１日オフサイトで気分を変えてみませんか？ひらめきが沸く環境で、チームの生産性を高めましょう</p>
+                    <div class="d-flex">
+                      <a style="color: black"; href="https://www.airbnb.jp/s/homes?refinement_paths[]=homes&work_trip=true">Wi-Fi完備の宿泊先を見る</a>
+                      <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-chevron-right pl-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img class="res__intro__img mt-3" src="https://picsum.photos/id/456/740/380" alt="#">
+            </div>
+
+            <!-- support -->
+              <div class="container-fluid">
+                <div class="row support d-flex" style="background: rgb(0, 108, 112);color: #fff;">
+                  <div class="support__left col-xl-4 offset-xl-1 col-md-8 offset-md-2 col-sm-12">
+                    <h2 class="support__title" style="opacity: 0.9;">安全第一のシステム</h2>
+                    <p style="font-size: 14px;">セキュアな支払いシステムから経験者のレビューまで、Airbnbは安全中心のシステムです。</p>
+                    <div class="d-flex">
+                      <a style="color: #fff;" href="https://www.airbnb.jp/trust">もっと詳しく</a>
+                      <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-chevron-right pl-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="container-fluid underlg_border"></div>
+
+                  <div class="support__right col-xl-4 offset-xl-2 col-md-8 offset-md-2 col-sm-12">
+                    <h2 class="support__title" style="opacity: 0.9;">グローバルカスタマーサポート</h2>
+                    <p style="font-size: 14px;">専門スタッフが、年中無休で営業時間内に11言語でサポートいたします。</p>
+                    <div class="d-flex">
+                      <a style="color: #fff;" href="https://www.airbnb.jp/s/all?refinement_paths%5B%5D=%2Fplaylists%2F1432&utm_source=airbnb&utm_medium=company_landing&utm_campaign=airbnb+work+landing+page+meetings+offsites">もっと詳しく</a>
+                      <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-chevron-right pl-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+
+              <!-- impressions -->
+              
+              <div class="container-fluid impression" style="padding: 0 10% 0 10%;">
+                <div class="row impressions d-flex p-0">
+                  <div class="impressions__left col-6">
+                    <img class="img-fluid" style="max-width: 100%; height: 500px; object-fit: cover;" src="https://picsum.photos/id/1000/1000" alt="#">
+                  </div>
+                   
+                  <div class="impressions__right col-6 p-0">
+                    <div class="row">
+                      <div class="col-md-8 offset-md-2">
+                        <h5 class="impression__txt" style="line-height: 3rem;">「Airbnbは自活できるのがいいですね。毎晩外食しなくても、みんなで好きなものを料理できるし、とても出張とは思えないほど現地に根を下ろせます」</h5>
+                        <p class="impressions__name" style="font-weight: bolder;">MARTA KUTT様</p>
+                        <p class="impression__position">Transferwise社マネジャー</p>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+
+              <!-- impression < sm -->
+              <div class="res__impressions">
+                <img style="width: 94%; height: 380px; margin: 3%; object-fit: cover;" src="https://picsum.photos/id/600/400" alt="#">
+                  
+                <div class="container-fluid" style="background-color: rgb(235, 235, 235);">
+                  <div class="row">
+                    <div class="res__impressions__bottom col-8 offset-2 p-0 mt-2">
+                      <div class="row">
+                        <div class="col-md-8 offset-md-2 py-5">
+                          <h5 class="res__impression__txt" style="line-height: 1.5rem; font-size: 14px;">「Airbnbは自活できるのがいいですね。毎晩外食しなくても、みんなで好きなものを料理できるし、とても出張とは思えないほど現地に根を下ろせます」</h5>
+                          <p class="res__impressions__name mt-3 mb-0" style="font-weight: bolder;">MARTA KUTT様</p>
+                          <p class="res__impression__position">Transferwise社マネジャー</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="format__container container-fluid py-5" style="border-block-color: rgb(235, 235, 235);">
+                <div class="row">
+                  <div class="format__wrap p-3" style="margin: 0 auto;">
+                    <h2 class="format__title">働き方を変えたいなら、Airbnbです</h2>
+                      <div class="form-group">
+                        <label for="email" id="format_email" style="position: relative; width: 100%;">まずは仕事用メールアドレスの登録から
+                          <input type="email" class="form-control" style="height: 60px; width: 100%;" aria-label="Recipient's username" aria-describedby="basic-addon2" id="email">
+                          <button style="position: absolute; top: 42%; right: 3%;" class="btn btn-info text-nowrap" id="format_email" type="button">メールアドレスを追加</button>
+                        </label>
+                      </div>                  
+                      <div class="format__border m-4" style="border: 1px solid rgb(224, 220, 220)"></div>
+
+                      <p class="mt-5 text-center">出張管理をご担当ですか？</p>
+                      <p class="text-center" style="opacity: 0.6;">こんなにある、Airbnbビジネスプログラム法人企業様のメリット</p>
+                      <div class="d-flex">
+                        <a style="margin: 0 auto; position: relative;" href="https://www.airbnbforwork.com/">もっと詳しく
+                          <svg style="position: absolute; " width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-chevron-right pl-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                        </a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-fluid footer__around">
+                <div class="footer row pb-5" style="margin: 0 70px; border-bottom: 1px solid rgb(235, 235, 235);">
+                    <div class="col-md-3 footer__content">
+                        <p>企業情報</p>
+                        <a href="https://news.airbnb.com/ja/"><p>ニュースルーム</p></a>
+                        <p><a href="https://www.airbnb.jp/d/howairbnbworks">Airbnbのご利用方法</a></p>
+                        <p><a href="https://www.airbnb.jp/plus">Airbnb Plus</a></p>
+                        <p><a href="https://www.airbnb.jp/luxury">Airbnb Luxe</a></p>
+                        <p><a href="https://www.hoteltonight.com/?utm_source_name=Airbnb&utm_campaign_name=Dr_Us_Desktop_Airbnb_Footer">HotelTonight</a></p>
+                        <p><a href="https://www.airbnb.jp/work?s=footer">Airbnbビジネスプログラム</a></p>
+                        <p><a href="https://www.airbnb.jp/d/olympics">オリンピック</a></p>
+                        <p><a href="https://careers.airbnb.com/">採用情報</a></p>
+                    </div>
+
+                    <div class="col-md-3 footer__content">
+                      <p>コミュニティ</p>
+                        <a href="https://www.airbnb.jp/diversity"><p>ダイバーシティ＆ビロンギング</p></a>
+                        <p><a href="https://www.airbnb.jp/d/accessibility">アクセシビリティ対応</a></p>
+                        <p><a href="https://www.airbnb.jp/associates?from=footer">Airbnbアソシエイト</a></p>
+                        <p><a href="https://www.airbnb.jp/invite?r=6">お友達を招待</a></p>
+                    </div>
+
+                    <div class="col-md-3 footer__content">
+                      <p>ホスト</p>
+                        <a href="https://www.airbnb.jp/host/homes?from_footer=1"><p>お部屋を掲載</p></a>
+                        <p><a href="https://www.airbnb.jp/d/onlinehost">オンライン体験をホストする</a></p>
+                        <p><a href="https://www.airbnb.jp/host/experiences">体験をホストする</a></p>
+                        <p><a href="https://www.airbnb.jp/help/article/1386/%E6%97%A5%E6%9C%AC%E3%81%A7%E3%81%AE%E8%B2%AC%E4%BB%BB%E3%81%82%E3%82%8B%E3%83%9B%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0y">責任あるホスティング</a></p>
+                        <p><a href="https://www.airbnb.jp/openhomes?from_footer=1">オープンホーム</a></p>
+                        <p><a href="https://www.airbnb.jp/resources/hosting-homes">リソースセンター</a></p>
+                        <p><a href="https://community.withairbnb.com/t5/Airbnb%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC/ct-p/Community-Center-Japanese">コミュニティセンター</a></p>
+                      </div>
+
+                    <div class="col-md-3 footer__content">
+                      <p>企業情報</p>
+                        <a href="https://www.airbnb.jp/d/covidsafety"><p>Airbnbの新型コロナウイルスに対する取り組み</p></a>
+                        <p><a href="https://www.airbnb.jp/help/home">ヘルプセンター</a></p>
+                        <p><a href="https://www.airbnb.jp/help/article/2701/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9covid19%E3%81%AB%E9%96%A2%E9%80%A3%E3%81%99%E3%82%8B%E9%85%8C%E9%87%8F%E3%81%99%E3%81%B9%E3%81%8D%E4%BA%8B%E6%83%85%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC">キャンセルオプション</a></p>
+                        <p><a href="https://www.airbnb.jp/luxury">Airbnb Luxe</a></p>
+                        <p><a href="https://www.airbnb.jp/neighbors">近隣コミュニティサポート</a></p>
+                        <p><a href="https://www.airbnb.jp/trust">トラスト＆セーフティー</a></p>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-between footer__access">
+                  <div class="footer__left col-xl-6 pt-3" style="margin: 0 70px; font-size: 14px;">
+                    <a href="https://www.airbnb.jp/about/company-details">Airbnb Global Services Limited<br>
+                      観光庁長官(01)第S0001号(2018年6月15日-2023年6月14日)</a>
+                      <div class="footer__left__text d-flex">
+                        <p>&copy;2020 Airbnb, Inc. All rights reserved</p>
+                        <span>・</span><a href="https://www.airbnb.jp/help/article/2855/%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E4%BF%9D%E8%AD%B7%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC">プライバシー</a>
+                        <span>・</span><a href="https://www.airbnb.jp/help/article/2908/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84">利用規約</a>
+                        <span>・</span><a href="https://www.airbnb.jp/sitemaps/v2">サイトマップ</a>
+                        <span>・</span><a href="https://www.airbnb.jp/about/company-details">企業情報</a>
+                      </div>
+                  </div>
+                
+
+                    <div class="footer__right col-xl-4 pt-3">
+                      <svg class="pb-1" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
+                      </svg>
+                      <a href="#">日本語</a>
+                      <span class="ml-4">¥</span><a href="#">JPY</a>
+                      <div class="footer__sns" style="display: inline; margin: 0 100px 0 40px;">
+                        <a href="https://www.facebook.com/AirbnbJapan"><i class="fab fa-facebook-f" style="font-size: 18px;"></i></a>
+                        <a class="ml-4" href="https://twitter.com/airbnb_jp"><i class="fab fa-twitter" style="font-size: 18px;"></i></a>
+                        <a class="ml-4" href="https://www.instagram.com/airbnb/"><i class="fab fa-instagram" style="font-size: 20px;"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  <!-- md < footer__access < lg -->
+                  <div class="container-fluid footer__md">
+                    <div class="row" style="line-height: 2rem;">
+                      <div class="col-4">
+                        <p style="padding-left: 15px; font-size: 14px; font-weight: bold;">企業情報</p>
+                      </div>
+                      <div class="res_footer__link col-12" style="font-size: 14px;">
+                          <a class="col-4" href="https://news.airbnb.com/ja/">ニュースルーム</a>
+                          <a class="col-4" href="https://www.airbnb.jp/d/howairbnbworks">Airbnbのご利用方法</a>
+                          <a class="col-4" href="https://www.airbnb.jp/plus">Airbnb Plus</a>
+                      </div>
+                      <div class="res_footer__link col-12" style="font-size: 14px;">
+                        <a class="col-4" href="https://www.airbnb.jp/luxury">Airbnb Luxe</a>
+                        <a class="col-4" href="https://www.hoteltonight.com/?utm_source_name=Airbnb&utm_campaign_name=Dr_Us_Desktop_Airbnb_Footer">HotelTonight</a>
+                        <a class="col-4" href="https://www.airbnb.jp/work?s=footer">Airbnbビジネスプログラム</a>
+                      </div>
+                      <div class="res_footer__link col-12" style="font-size: 14px;">
+                        <a class="col-4" href="https://www.airbnb.jp/d/olympics">オリンピック</a>
+                        <a class="col-4" href="https://careers.airbnb.com/">採用情報</a>
+                        <a class="col-4" href="#"></a>
+                      </div>
+                    </div>
+                    <div class="footer_border my-4" style="border: 1px solid  rgb(235, 235, 235);"></div>
+
+                    <div class="row" style="line-height: 2rem;">
+                      <div class="col-4">
+                        <p style="padding-left: 15px; font-size: 14px; font-weight: bold; opacity: 1;">コミュニティ</p>
+                      </div>
+                      
+                      <div class="res_footer__link col-12" style="font-size: 14px;">
+                        <a class="col-4" href="https://www.airbnb.jp/diversity">ダイバーシティ＆ビロンギング</a>
+                        <a class="col-4" href="https://www.airbnb.jp/d/accessibility">アクセシビリティ対応</a>
+                        <a class="col-4" href="https://www.airbnb.jp/associates?from=footer">Airbnbアソシエイト</a>
+                      </div>
+                      <div class="res_footer__link col-12" style="font-size: 14px;">
+                        <a class="col-4" href="https://www.airbnb.jp/invite?r=6">お友達を招待</a>
+                      </div>
+                    </div>
+                    <div class="footer_border my-4" style="border: 1px solid  rgb(235, 235, 235);"></div>
+
+                    <div class="row" style="line-height: 2rem;">
+                      <div class="col-4">
+                        <p style="padding-left: 15px; font-size: 14px; font-weight: bold; opacity: 1;">ホスト</p>
+                      </div>
+                      
+                      <div class="res_footer__link col-12" style="font-size: 14px;">
+                        <a class="col-4" href="https://www.airbnb.jp/host/homes?from_footer=1">お部屋を掲載</a>
+                        <a class="col-4" href="https://www.airbnb.jp/d/onlinehost">オンライン体験をホストする</a>
+                        <a class="col-4" href="https://www.airbnb.jp/host/experiences">体験をホストする</a>
+                      </div>
+                      <div class="res_footer__link col-12" style="font-size: 14px;">
+                        <a class="col-4" href="https://www.airbnb.jp/help/article/1386/%E6%97%A5%E6%9C%AC%E3%81%A7%E3%81%AE%E8%B2%AC%E4%BB%BB%E3%81%82%E3%82%8B%E3%83%9B%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0y">責任あるホスティング</a>
+                        <a class="col-4" href="https://www.airbnb.jp/openhomes?from_footer=1">オープンホーム</a>
+                        <a class="col-4" href="https://www.airbnb.jp/resources/hosting-homes">リソースセンター</a>
+                      </div>
+                      <div class="res_footer__link col-12" style="font-size: 14px;">
+                        <a class="col-4" href="https://community.withairbnb.com/t5/Airbnb%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC/ct-p/Community-Center-Japanese">コミュニティセンター</a>
+                      </div>
+                    </div>
+                    <div class="footer_border my-4" style="border: 1px solid  rgb(235, 235, 235);"></div>
+
+                    <div class="row" style="line-height: 2rem;">
+                      <div class="col-4">
+                        <p style="padding-left: 15px; font-size: 14px; font-weight: bold; opacity: 1;">サポート</p>
+                      </div>
+                      
+                      <div class="res_footer__link col-12" style="font-size: 14px;">
+                        <a class="col-4" href="https://www.airbnb.jp/d/covidsafety"><p>Airbnbの新型コロナウイルスに対する取り組み</p></a>
+                        <a class="col-4" href="https://www.airbnb.jp/help/home">ヘルプセンター</a></p>
+                        <a class="col-4" href="https://www.airbnb.jp/help/article/2701/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9covid19%E3%81%AB%E9%96%A2%E9%80%A3%E3%81%99%E3%82%8B%E9%85%8C%E9%87%8F%E3%81%99%E3%81%B9%E3%81%8D%E4%BA%8B%E6%83%85%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC">キャンセルオプション</a>
+                      </div>
+                      <div class="res_footer__link col-12" style="font-size: 14px;">
+                        <a class="col-4" href="https://www.airbnb.jp/luxury">Airbnb Luxe</a>
+                        <a class="col-4" href="https://www.airbnb.jp/neighbors">近隣コミュニティサポート</a>
+                        <a class="col-4" href="https://www.airbnb.jp/trust">トラスト＆セーフティー</a>
+                      </div>
+                    </div>
+                    <div class="footer_border my-4" style="border: 1px solid  rgb(235, 235, 235);"></div>
+                  </div>
+
+                  <!-- footer < sm -->
+                  <div class="container-fluid footer__sm">
+                    <div class="row">
+                      <div class="col-4">
+                        <p style="padding-left: 15px; font-size: 14px; font-weight: bold;">企業情報</p>
+                      </div>
+                      <div class="row res_footer__link" style="font-size: 14px; margin-left: .925rem; line-height: 2rem;">    
+                        <a class="col-12" href="https://news.airbnb.com/ja/">ニュースルーム</a>            
+                        <a class="col-12" href="https://www.airbnb.jp/d/howairbnbworks">Airbnbのご利用方法</a>                
+                        <a class="col-12" href="https://www.airbnb.jp/plus">Airbnb Plus</a>
+                        <a class="col-12" href="https://www.airbnb.jp/luxury">Airbnb Luxe</a>
+                        <a class="col-12" href="https://www.hoteltonight.com/?utm_source_name=Airbnb&utm_campaign_name=Dr_Us_Desktop_Airbnb_Footer">HotelTonight</a>
+                        <a class="col-12" href="https://www.airbnb.jp/work?s=footer">Airbnbビジネスプログラム</a>
+                        <a class="col-12" href="https://www.airbnb.jp/d/olympics">オリンピック</a>
+                        <a class="col-12" href="https://careers.airbnb.com/">採用情報</a>
+                      </div>
+                    </div>
+                    <div class="footer_border_sm my-4" style="border: 1px solid  rgb(233, 229, 229);"></div>
+
+                    <div class="row">
+                      <div class="col-4">
+                        <p style="padding-left: 15px; font-size: 14px; font-weight: bold;">コミュニティ</p>
+                      </div>
+                      <div class="row res_footer__link" style="font-size: 14px; margin-left: .925rem; line-height: 2rem;">    
+                        <a class="col-12" href="https://www.airbnb.jp/diversity">ダイバーシティ＆ビロンギング</a>
+                        <a class="col-12" href="https://www.airbnb.jp/d/accessibility">アクセシビリティ対応</a>
+                        <a class="col-12" href="https://www.airbnb.jp/associates?from=footer">Airbnbアソシエイト</a>
+                        <a class="col-12" href="https://www.airbnb.jp/invite?r=6">お友達を招待</a>
+                      </div>
+                    </div>
+                    <div class="footer_border_sm my-4" style="border: 1px solid  rgb(233, 229, 229);"></div>
+
+                    <div class="row">
+                      <div class="col-4">
+                        <p style="padding-left: 15px; font-size: 14px; font-weight: bold;">ホスト</p>
+                      </div>
+                      <div class="row res_footer__link" style="font-size: 14px; margin-left: .925rem; line-height: 2rem;">    
+                        <a class="col-12" href="https://www.airbnb.jp/host/homes?from_footer=1">お部屋を掲載</a>
+                        <a class="col-12" href="https://www.airbnb.jp/d/onlinehost">オンライン体験をホストする</a>
+                        <a class="col-12" href="https://www.airbnb.jp/host/experiences">体験をホストする</a>
+                        <a class="col-12" href="https://www.airbnb.jp/help/article/1386/%E6%97%A5%E6%9C%AC%E3%81%A7%E3%81%AE%E8%B2%AC%E4%BB%BB%E3%81%82%E3%82%8B%E3%83%9B%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0y">責任あるホスティング</a>
+                        <a class="col-12" href="https://www.airbnb.jp/openhomes?from_footer=1">オープンホーム</a>
+                        <a class="col-12" href="https://www.airbnb.jp/resources/hosting-homes">リソースセンター</a>
+                        <a class="col-12" href="https://community.withairbnb.com/t5/Airbnb%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC/ct-p/Community-Center-Japanese">コミュニティセンター</a>
+                      </div>
+                    </div>
+                    <div class="footer_border_sm my-4" style="border: 1px solid  rgb(233, 229, 229);"></div>
+
+                    <div class="row">
+                      <div class="col-4">
+                        <p style="padding-left: 15px; font-size: 14px; font-weight: bold;">サポート</p>
+                      </div>
+                      <div class="row res_footer__link" style="font-size: 14px; margin-left: .925rem; line-height: 2rem;">    
+                        <a class="col-12" href="https://www.airbnb.jp/d/covidsafety">Airbnbの新型コロナウイルスに対する取り組み</a>
+                        <a class="col-12" href="https://www.airbnb.jp/help/home">ヘルプセンター</a></p>
+                        <a class="col-12" href="https://www.airbnb.jp/help/article/2701/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9covid19%E3%81%AB%E9%96%A2%E9%80%A3%E3%81%99%E3%82%8B%E9%85%8C%E9%87%8F%E3%81%99%E3%81%B9%E3%81%8D%E4%BA%8B%E6%83%85%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC">キャンセルオプション</a>
+                        <a class="col-12" href="https://www.airbnb.jp/luxury">Airbnb Luxe</a>
+                        <a class="col-12" href="https://www.airbnb.jp/neighbors">近隣コミュニティサポート</a>
+                        <a class="col-12" href="https://www.airbnb.jp/trust">トラスト＆セーフティー</a>
+                      </div>
+                    </div>
+                    <div class="footer_border_sm my-4" style="border: 1px solid  rgb(233, 229, 229);"></div>
+                  </div>
+
+                  <div class="res_footer__access text-center mb-4">
+                    <div class="pt-2 res_footer__text">
+                    
+                        <svg class="pb-1 pl-4" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
+                        </svg>
+                        <a href="#">日本語</a>
+                      
+                      <span class="ml-4">¥</span><a href="#">JPY</a>
+                      <div class="footer__sns" style="display: inline; margin: 0 40px 0 40px; box-sizing: border-box;">
+                        <a href="https://www.facebook.com/AirbnbJapan"><i class="fab fa-facebook-f" style="font-size: 18px;"></i></a>
+                        <a class="ml-3" href="https://twitter.com/airbnb_jp"><i class="fab fa-twitter" style="font-size: 18px;"></i></a>
+                        <a class="ml-3" href="https://www.instagram.com/airbnb/"><i class="fab fa-instagram" style="font-size: 20px;"></i></a>
+                      </div>
+                    </div>
+
+                    <div class="pt-3 text-center res_footer__text" style="font-size: 14px;">
+                      <a href="https://www.airbnb.jp/about/company-details">Airbnb Global Services Limited
+                        観光庁長官(01)第S0001号(2018年6月15日-2023年6月14日)</a>
+                        <div style="margin: 0 auto;">
+                          <p class="mb-0">&copy;2020 Airbnb, Inc. All rights reserved</p>
+                          <span>・</span><a href="https://www.airbnb.jp/help/article/2855/%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E4%BF%9D%E8%AD%B7%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC">プライバシー</a>
+                          <span>・</span><a href="https://www.airbnb.jp/help/article/2908/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84">利用規約</a>
+                          <span>・</span><a href="https://www.airbnb.jp/sitemaps/v2">サイトマップ</a>
+                          <span>・</span><a href="https://www.airbnb.jp/about/company-details">企業情報</a>
+                      </div>
+                    </div>
+                  </div>
+                
+              
+
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html> 

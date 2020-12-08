@@ -1,0 +1,20 @@
+.introduce__wrap {
+    display: flex;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+}
+
+.introduce__pic {
+    object-fit: cover;
+}
+
+// .res_intro__wrap {
+//     margin-left: 30px;
+// }
+.res__intro__img {
+    height: 380px;
+    width: 90%;
+    object-fit: cover;
+    margin-left: 5%;
+    
+}

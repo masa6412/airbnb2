@@ -1,0 +1,16 @@
+.impressions {
+    margin-top: 5rem;
+    &__right {
+        background-color :rgb(235, 235, 235);
+        display: flex;
+        align-items: center;
+        h5 {
+            line-height: 3rem;
+        }
+    }
+}
+
+.impressions__name {
+    margin: 2rem 0 0 0;
+}
+

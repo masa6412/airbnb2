@@ -1,0 +1,38 @@
+.format__container {
+    margin: 5rem 0 2.5rem 0;
+    background-color: rgb(235, 235, 235);
+}
+
+
+.format {
+    margin: 0 auto;
+    &__input {
+        position: relative;
+        &__button{
+            font-size: 14px;
+            position: absolute;
+            top: 14%;
+            right: 5%;
+        }
+    }
+}
+
+.format__breakpoint {
+    height: 100px;
+    position: relative;
+    &__border {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        border: 1px solid #d8d5d5;
+    }
+}
+
+.format__bottom {
+    line-height: 2rem;
+}
+
+.format__bottom p {
+    margin: 0 auto;
+}
